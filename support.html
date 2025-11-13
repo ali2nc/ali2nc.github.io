@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Ali Tunç</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-size: 18px;
+      --ink: #111;
+      --muted: #555;
+      --border: #dcdcdc;
+      --accent: #0b4ba2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Century Schoolbook", "Times New Roman", Times, serif;
+      background: #fff;
+      color: var(--ink);
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 24px 120px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 0 0 1.5rem;
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 1.2rem;
+      text-align: justify;
+      text-align-last: left;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 0 auto 32px;
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 8px 18px;
+      font: inherit;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .lang-toggle button[aria-pressed="true"] {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    body[data-lang="en"] .lang-section--en,
+    body[data-lang="tr"] .lang-section--tr {
+      display: block;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 48px 20px 96px;
+      }
+
+      .lang-toggle {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body data-lang="en">
+  <main>
+    <div style="text-align:center;">
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button type="button" data-lang-select="tr" aria-pressed="false">TR</button>
+        <button type="button" data-lang-select="en" aria-pressed="true">EN</button>
+      </div>
+    </div>
+
+    <section class="lang-section lang-section--en" aria-label="Support in English">
+      <h1>Support</h1>
+      <p>If you experience any issues, technical glitches, suggestions, or feedback related to our applications or websites, please reach out. We are happy to help and aim to resolve every request quickly.</p>
+      <p><strong>Email:</strong> <a href="mailto:hello@ali2nc.com">hello@ali2nc.com</a></p>
+      <p>All messages receive a response as soon as possible. Thank you for your support!</p>
+    </section>
+
+    <section class="lang-section lang-section--tr" aria-label="Destek Türkçe">
+      <h1>Destek</h1>
+      <p>Uygulamalarımız veya web sitelerimizle ilgili yaşadığınız herhangi bir sorun, teknik aksaklık, öneri ya da geri bildirim için bizimle iletişime geçebilirsiniz. Size yardımcı olmaktan memnuniyet duyarız.</p>
+      <p><strong>E-posta:</strong> <a href="mailto:hello@ali2nc.com">hello@ali2nc.com</a></p>
+      <p>Tüm mesajlar en kısa sürede yanıtlanacaktır. Desteğiniz için teşekkür ederiz!</p>
+    </section>
+
+    <footer>
+      © 2025 Ali Tunç<br>
+      <a href="index.html">Return to Home</a> · <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('[data-lang-select]');
+      const setLang = (lang) => {
+        document.body.dataset.lang = lang;
+        buttons.forEach((btn) => {
+          const isActive = btn.getAttribute('data-lang-select') === lang;
+          btn.setAttribute('aria-pressed', String(isActive));
+        });
+        try {
+          localStorage.setItem('ali-support-lang', lang);
+        } catch (e) {
+          /* ignore */
+        }
+      };
+
+      const saved = (() => {
+        try {
+          return localStorage.getItem('ali-support-lang');
+        } catch (e) {
+          return null;
+        }
+      })();
+
+      if (saved === 'tr' || saved === 'en') {
+        setLang(saved);
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          setLang(btn.getAttribute('data-lang-select'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
