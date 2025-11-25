@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU Compliance — Ali Tunç</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TSNWB8G2P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0TSNWB8G2P');
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      font-size: 16px;
+      --ink: #111;
+      --muted: #555;
+      --border: #dcdcdc;
+      --accent: #0b4ba2;
+      --soft: #f7f7f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Century Schoolbook", "Times New Roman", Times, serif;
+      background: #fff;
+      color: var(--ink);
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 24px 120px;
+    }
+
+    h1 {
+      font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+      margin: 0 0 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      margin: 2rem 0 0.8rem;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0 0 1.2rem;
+      text-align: justify;
+      text-align-last: left;
+    }
+
+    ul {
+      margin: 0 0 1.2rem 1.3rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 0 auto 32px;
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 8px 18px;
+      font: inherit;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .lang-toggle button[aria-pressed="true"] {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    body[data-lang="en"] .lang-section--en,
+    body[data-lang="tr"] .lang-section--tr {
+      display: block;
+    }
+
+    .info-card {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 0 0 1.5rem;
+    }
+
+    .info-card p {
+      margin: 0.4rem 0;
+      text-align: left;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    .updated {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 48px 20px 96px;
+      }
+
+      .lang-toggle {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body data-lang="en">
+  <main>
+    <div style="text-align:center;">
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button type="button" data-lang-select="tr" aria-pressed="false">TR</button>
+        <button type="button" data-lang-select="en" aria-pressed="true">EN</button>
+      </div>
+    </div>
+
+    <section class="lang-section lang-section--en" aria-label="EU Compliance in English">
+      <h1>EU Product Safety &amp; Compliance Information</h1>
+      <div class="info-card">
+        <p><strong>Developer:</strong> Ali Tunç</p>
+        <p><strong>Contact Email:</strong> <a href="mailto:hello@ali2nc.com">hello@ali2nc.com</a></p>
+        <p><strong>Website:</strong> <a href="https://ali2nc.com" target="_blank" rel="noopener">ali2nc.com</a></p>
+        <p><strong>Support Page:</strong> <a href="https://ali2nc.com/support.html" target="_blank" rel="noopener">ali2nc.com/support.html</a></p>
+      </div>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2>About This Application</h2>
+      <p>This application is a digital software-only product distributed through the Apple App Store. It does not include or interact with any physical hardware or regulated device. As a result, the app is outside the scope of EU product label requirements that apply to physical goods, electronics, toys, IoT devices, medical products, or other CE-regulated categories.</p>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2>Compliance Status</h2>
+      <ul>
+        <li>✔ This app does not require CE marking.</li>
+        <li>✔ No physical product safety label is applicable.</li>
+        <li>✔ No packaging, warning labels, or regulated compliance markings apply.</li>
+        <li>✔ This app complies with EU Digital Services Act (DSA) transparency requirements.</li>
+        <li>✔ Users can contact the developer via the support email above for assistance.</li>
+      </ul>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2>Future Regulatory Updates</h2>
+      <p>If future EU law or regulation introduces additional compliance statements, product safety information, or labeling obligations for digital-only software, this page will be updated accordingly.</p>
+
+      <p class="updated">Last updated: 25 November 2025</p>
+    </section>
+
+    <section class="lang-section lang-section--tr" aria-label="AB Uyumluluk Türkçe">
+      <h1>AB Ürün Güvenliği ve Uyumluluk Bilgisi</h1>
+      <div class="info-card">
+        <p><strong>Geliştirici:</strong> Ali Tunç</p>
+        <p><strong>İletişim E-postası:</strong> <a href="mailto:hello@ali2nc.com">hello@ali2nc.com</a></p>
+        <p><strong>Web Sitesi:</strong> <a href="https://ali2nc.com" target="_blank" rel="noopener">ali2nc.com</a></p>
+        <p><strong>Destek Sayfası:</strong> <a href="https://ali2nc.com/support.html" target="_blank" rel="noopener">ali2nc.com/support.html</a></p>
+      </div>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2>Uygulama Hakkında</h2>
+      <p>Bu uygulama, Apple App Store üzerinden dağıtılan ve yalnızca yazılımdan oluşan dijital bir üründür. Herhangi bir fiziksel donanım veya düzenlemeye tabi cihaz içermez ya da onlarla etkileşime girmez. Bu nedenle fiziksel ürünler, elektronikler, oyuncaklar, IoT cihazları, tıbbi cihazlar veya diğer CE kapsamındaki kategoriler için geçerli olan AB ürün etiketleme gerekliliklerinin dışında kalır.</p>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2>Uyumluluk Durumu</h2>
+      <ul>
+        <li>✔ Bu uygulama için CE işareti gerekmemektedir.</li>
+        <li>✔ Fiziksel bir ürün güvenlik etiketi uygulanmaz.</li>
+        <li>✔ Ambalaj, uyarı etiketi veya düzenlemeye tabi başka bir işaret zorunlu değildir.</li>
+        <li>✔ Uygulama, AB Dijital Hizmetler Yasası (DSA) şeffaflık gerekliliklerine uygundur.</li>
+        <li>✔ Kullanıcılar destek için yukarıdaki e-posta adresi üzerinden geliştiriciyle iletişime geçebilir.</li>
+      </ul>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2>Gelecekteki Düzenlemeler</h2>
+      <p>Yalnızca yazılım tabanlı ürünler için ek uyumluluk açıklamaları, ürün güvenliği bilgileri veya etiketleme yükümlülükleri getiren yeni AB kanunları yürürlüğe girerse, bu sayfa ilgili detaylarla güncellenecektir.</p>
+
+      <p class="updated">Son güncelleme: 25 Kasım 2025</p>
+    </section>
+
+    <footer>
+      © 2025 Ali Tunç<br>
+      <a href="index.html">Return to Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="support.html">Support</a>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('[data-lang-select]');
+      const setLang = (lang) => {
+        document.body.dataset.lang = lang;
+        buttons.forEach((btn) => {
+          const isActive = btn.getAttribute('data-lang-select') === lang;
+          btn.setAttribute('aria-pressed', String(isActive));
+        });
+        try {
+          localStorage.setItem('ali-eu-lang', lang);
+        } catch (e) {
+          /* ignore storage issues */
+        }
+      };
+
+      const saved = (() => {
+        try {
+          return localStorage.getItem('ali-eu-lang');
+        } catch (e) {
+          return null;
+        }
+      })();
+
+      if (saved === 'tr' || saved === 'en') {
+        setLang(saved);
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          setLang(btn.getAttribute('data-lang-select'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
