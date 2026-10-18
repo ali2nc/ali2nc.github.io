@@ -145,7 +145,7 @@
     </section>
 
     <footer>
-      © 2025 Ali Tunç<br>
+      © <span id="copyright-year">2026</span> Ali Tunç<br>
       <a href="index.html">Return to Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="eu-compliance.html">EU Compliance</a>
     </footer>
   </main>
@@ -184,6 +184,9 @@
         });
       });
     })();
+  </script>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
